@@ -1,0 +1,9 @@
+
+> @my/ui@0.0.1 build /Users/mateh/github/tamagui-test/packages/ui
+> tamagui-build
+
+Command failed with exit code 2: npx tsc --baseUrl . --outDir types --rootDir src --emitDeclarationOnly --declarationMap
+src/CustomToast.tsx(2,10): error TS2724: '"tamagui"' has no exported member named 'YStack'. Did you mean 'Stack'?
+src/CustomToast.tsx(12,5): error TS2307: Cannot find module 'react/jsx-runtime' or its corresponding type declarations.
+src/MyComponent.tsx(1,18): error TS2724: '"tamagui"' has no exported member named 'YStack'. Did you mean 'Stack'?
+ ELIFECYCLE  Command failed with exit code 1.
