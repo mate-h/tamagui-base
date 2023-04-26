@@ -16,7 +16,7 @@ Welcome to Tamagui!
 
 You can update this monorepo to the latest Tamagui release just by running:
 
-yarn upgrade:tamagui
+pnpm upgrade:tamagui
 
 We've set up a few things for you.
 
