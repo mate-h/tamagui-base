@@ -9,7 +9,7 @@
     "build": "pnpm -r build",
     "check-deps": "check-dependency-version-consistency .",
     "fix": "manypkg fix",
-    "postinstall": "pnpm check-deps",
+    "postinstall": "pnpm check-deps && pnpm build",
     "native": "cd apps/expo && pnpm start",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader && manypkg upgrade react-native-web-lite",
     "vercel:install": "pnpm set version 3.5 && pnpm install",
