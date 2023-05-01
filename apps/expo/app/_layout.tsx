@@ -3,11 +3,14 @@ import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import { useColorScheme } from 'react-native'
+import Inter from '@tamagui/font-inter/otf/Inter-Medium.otf'
+import InterBold from '@tamagui/font-inter/otf/Inter-Bold.otf'
 
 export default function HomeLayout() {
+  console.log('HomeLayout', {Inter, InterBold})
   const [loaded] = useFonts({
-    Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
-    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
+    Inter,
+    InterBold,
   })
   const scheme = useColorScheme()
 

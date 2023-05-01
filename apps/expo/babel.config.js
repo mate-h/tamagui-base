@@ -1,7 +1,7 @@
 module.exports = function (api) {
   api.cache(true)
   return {
-    presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
+    presets: ['@rnx-kit/babel-preset-metro-react-native'],
     plugins: [
       require.resolve('expo-router/babel'),
       [
