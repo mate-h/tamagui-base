@@ -1,14 +1,14 @@
-# Tamagui + Solito + Next + Expo Monorepo
+# tamagui-base
 
-```sh
-npm create tamagui
-```
+Template repository for cross platform app development with React.
 
 ## 🔦 About
 
 This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
 
-Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
+This repository serves as a template, and is a variation of the Create Tamagui App CLI template but with PNPM Workspace instead of Yarn workspace.
+
+https://tamagui.dev/docs/guides/create-tamagui-app
 
 ## 📦 Included packages
 
@@ -36,15 +36,15 @@ You can add other folders inside of `packages/` if you know what you're doing an
 
 ## 🏁 Start the app
 
-- Install dependencies: `yarn`
+- Install dependencies: `pnpm i`
 
-- Next.js local dev: `yarn web`
+- Next.js local dev: `pnpm web`
 
-To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn web:prod`.
+To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `pnpm web:extract`. To build for production `pnpm web:prod`.
 
 To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
 
-- Expo local dev: `yarn native`
+- Expo local dev: `pnpm native`
 
 
 ## Developing
@@ -65,9 +65,9 @@ If you're installing a JavaScript-only dependency that will be used across platf
 
 ```sh
 cd packages/app
-yarn add date-fns
+pnpm add date-fns
 cd ../..
-yarn
+pnpm i
 ```
 
 ### Native dependencies
@@ -76,9 +76,9 @@ If you're installing a library with any native code, you must install it in `exp
 
 ```sh
 cd apps/expo
-yarn add react-native-reanimated
+pnpm i react-native-reanimated
 cd ..
-yarn
+pnpm i
 ```
 
 You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
@@ -88,6 +88,6 @@ You may potentially want to have the native module transpiled for the next app. 
 ### Deploying to Vercel
 
 - Root: `./apps/next`
-- Install command to be `yarn set version berry && yarn install`
+- Install command to be `pnpm set version berry && pnpm install`
 - Build command: leave default setting
 - Output dir: leave default setting
